@@ -17,4 +17,4 @@ M = {
 	},
 }
 
-return {}
+return { M }
