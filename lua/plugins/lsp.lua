@@ -28,8 +28,11 @@ return {
 
 								diagnosticSeverityOverrides = {
 									reportOptionalMemberAccess = false,
+									reportCallIssue = false,
+									reportArgumentType = false,
 									reportOptionalSubscript = false,
 									reportOptionalCall = false,
+									reportOperatorIssue = false,
 									reportWildcardImportFromLibrary = false,
 								},
 							},
