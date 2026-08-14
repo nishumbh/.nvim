@@ -9,10 +9,20 @@
 --
 
 vim.api.nvim_create_autocmd("TermOpen", {
-  callback = function()
-    vim.opt_local.number = false
-    vim.opt_local.relativenumber = false
-    vim.opt_local.signcolumn = "no"
-    vim.opt_local.cursorline = false
-  end,
+	callback = function()
+		vim.opt_local.number = false
+		vim.opt_local.relativenumber = false
+		vim.opt_local.signcolumn = "no"
+		vim.opt_local.cursorline = false
+	end,
+})
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		-- Only run if no file was passed
+		if vim.fn.argc() == 0 then
+			-- Open oil in current working directory
+			require("oil").open()
+		end
+	end,
 })

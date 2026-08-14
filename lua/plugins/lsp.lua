@@ -31,6 +31,7 @@ return {
 									reportOptionalSubscript = false,
 									reportOptionalCall = false,
 									reportWildcardImportFromLibrary = false,
+									reportArgumentType = false,
 								},
 							},
 						},
@@ -63,6 +64,18 @@ return {
 
 						return cmd
 					end)(),
+				},
+				yamlls = {
+					settings = {
+						yaml = {
+							schemas = {
+								["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = {
+									"**/azure-pipelines.yml",
+									"**/azure-pipelines.yaml",
+								},
+							},
+						},
+					},
 				},
 			},
 		},

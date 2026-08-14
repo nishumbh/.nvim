@@ -2,6 +2,9 @@
 require("config.lazy")
 require("config.setrun")
 
-vim.cmd("colorscheme kanagawa-dragon") -- retrobox
-vim.opt.relativenumber = false
+-- vim.cmd("colorscheme kanagawa-dragon") -- retrobox
 vim.opt.signcolumn = "auto:1"
+-- vim.opt.number = false
+vim.opt.fileformat = "unix"
+vim.opt.fileformats = { "unix", "dos" }
+
